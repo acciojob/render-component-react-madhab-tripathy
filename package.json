@@ -5,18 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --no-color 2>output.txt",
-    "start": "webpack-dev-server --mode development --watch --open --hot",
-    "build": "webpack --mode production"
+    "start": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "set SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^9.5.0",
     "css-loader": "^4.3.0",
+    "cypress": "^9.5.0",
     "jest-junit": "^11.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-scripts": "^5.0.1",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.12"
   },
@@ -51,5 +52,17 @@
     "webpack": "^4.44.2",
     "webpack-dev-server": "^3.11.0",
     "xml-js": "^1.6.11"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
